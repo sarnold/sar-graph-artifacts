@@ -19,3 +19,12 @@ and create a "dev" environment for testing::
 
 
 .. _Tox: https://tox.wiki/en/latest/user_guide.html
+
+
+Examples
+========
+
+.. figure:: examples/sarcharts.png
+  :width: 90%
+
+  Figure 1 sarcharts memused (percent)
