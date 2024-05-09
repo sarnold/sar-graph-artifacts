@@ -9,6 +9,7 @@ multi-threaded applications.
 * candidate 2 - https://github.com/pdutton-vc/sarviewer (not really python)
 * candidate 3 - https://github.com/jpgxs/python-sadf (archived 2 yrs ago)
 * candidate 4 - https://github.com/pafernanr/sarcharts
+* candidate 5 - https://github.com/sakti/gperf.git (old and needs cleanup)
 
 Run the following Tox_ command to sync the the above candidate repositories
 and create a "dev" environment for testing::
@@ -28,3 +29,9 @@ Examples
   :width: 90%
 
   Figure 1 sarcharts memused (percent)
+
+
+.. figure:: examples/gperf_cpu.png
+  :width: 90%
+
+  Figure 2 gperf CPU (percent)
