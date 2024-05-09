@@ -1,0 +1,77 @@
+prog_name: repolite
+top_dir: ext  # local directory path for enabled repositories
+pull_with_rebase: false  # use --ff-only if false
+# add new repo_name sections as needed
+repos:
+  - repo_name: sclean
+    repo_alias: null
+    repo_url: https://github.com/stoneboy100200/sclean.git
+    repo_depth: 0
+    repo_remote: origin
+    repo_opts: []
+    repo_branch: master
+    repo_hash: null
+    repo_create_tag_msg: tag for RC release
+    repo_create_tag_annotated: true
+    repo_create_tag_signed: false
+    repo_push_new_tags: false
+    repo_signing_key: null
+    repo_use_rebase: false
+    repo_has_lfs_files: false
+    repo_init_submodules: false
+    repo_install: false
+    repo_enable: true
+  - repo_name: python-sadf
+    repo_alias: sadf
+    repo_url: https://github.com/jpgxs/python-sadf.git
+    repo_depth: 0
+    repo_remote: origin
+    repo_opts: []
+    repo_branch: master
+    repo_hash: null
+    repo_create_tag_msg: tag for RC release
+    repo_create_tag_annotated: true
+    repo_create_tag_signed: false
+    repo_push_new_tags: false
+    repo_signing_key: null
+    repo_use_rebase: false
+    repo_has_lfs_files: false
+    repo_init_submodules: false
+    repo_install: false
+    repo_enable: true
+  - repo_name: sarviewer
+    repo_alias: null
+    repo_url: https://github.com/pdutton-vc/sarviewer.git
+    repo_depth: 0
+    repo_remote: origin
+    repo_opts: []
+    repo_branch: master
+    repo_hash: null
+    repo_create_tag_msg: tag for RC release
+    repo_create_tag_annotated: true
+    repo_create_tag_signed: false
+    repo_push_new_tags: false
+    repo_signing_key: null
+    repo_use_rebase: false
+    repo_has_lfs_files: false
+    repo_init_submodules: false
+    repo_install: false
+    repo_enable: true
+  - repo_name: sarcharts
+    repo_alias: null
+    repo_url: https://github.com/pafernanr/sarcharts.git
+    repo_depth: 0
+    repo_remote: origin
+    repo_opts: []
+    repo_branch: main
+    repo_hash: null
+    repo_create_tag_msg: tag for RC release
+    repo_create_tag_annotated: true
+    repo_create_tag_signed: false
+    repo_push_new_tags: false
+    repo_signing_key: null
+    repo_use_rebase: false
+    repo_has_lfs_files: false
+    repo_init_submodules: false
+    repo_install: false
+    repo_enable: true
