@@ -9,7 +9,7 @@ multi-threaded applications.
 * candidate 1 - https://github.com/stoneboy100200/sclean (expects text output from **stat cmds)
 * candidate 2 - https://github.com/pdutton-vc/sarviewer (not really python, broken)
 * candidate 3 - https://github.com/jpgxs/python-sadf (example old and broken)
-* candidate 4 - https://github.com/pafernanr/sarcharts (works as intended but needs ALL data)
+* candidate 4 - https://github.com/pafernanr/sarcharts (works fine except on older embedded kernels)
 * candidate 5 - https://github.com/sakti/gperf (old and needs cleanup, graphs ugly)
 
 Run the following Tox_ command to sync the the above candidate repositories
@@ -101,3 +101,19 @@ Graphs
   :width: 90%
 
   Figure 3 gperf CPU (percent)
+
+
+Sample data
+-----------
+
+Sample data from arm64 test devices illustrating the result of Linux kernel
+option ``CONFIG_EMBEDDED`` on (sar) activities. Enabled on Rpi kernel, but no
+longer exists in 6.8.
+
+Rockchip with 6.8.x kernel, filename prefix ``sa11``::
+
+  Linux nanopi-r5c 6.8.6-gentoo-dist #1 SMP PREEMPT_DYNAMIC Sat Apr 13 14:35:01 -00 2024 aarch64 GNU/Linux
+
+Broadcom rpi64 with 5.15.x rpi-sources kernel, filename prefix ``sa09``::
+
+  Linux raspberrypi3-64 5.15.92-v8 #1 SMP PREEMPT Wed Feb 8 16:47:50 UTC 2023 aarch64 aarch64 aarch64 GNU/Linux
