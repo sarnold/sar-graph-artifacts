@@ -69,6 +69,9 @@ Examples using ``sar``::
   $ sar -A 1 1  # collect ALL plus -I and -P (see man page)
   $ sar -r ALL -u ALL 1 1  # collect only CPU and MEM parameters
 
+
+Note the above ``sar`` examples may collect more data than advertised.
+
 Extract all data as CSV::
 
   $ sadf -d -- -A /path/to/sa/sa05 > all.csv
