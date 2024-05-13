@@ -6,10 +6,10 @@ data collected from a modest embedded board running Linux and several
 multi-threaded applications.
 
 * candidate 0 - https://github.com/sysstat/sysstat / contrib/sargraph/sargraph2 (stale headers)
-* candidate 1 - https://github.com/stoneboy100200/sclean (expects text output from **stat cmds)
+* candidate 1 - https://github.com/stoneboy100200/sclean (expects text output from \*stat cmds)
 * candidate 2 - https://github.com/pdutton-vc/sarviewer (not really python, broken)
 * candidate 3 - https://github.com/jpgxs/python-sadf (example old and broken)
-* candidate 4 - https://github.com/pafernanr/sarcharts (works fine except on older embedded kernels)
+* candidate 4 - https://github.com/pafernanr/sarcharts (works fine except on some embedded kernels)
 * candidate 5 - https://github.com/sakti/gperf (old and needs cleanup, graphs ugly)
 
 Run the following Tox_ command to sync the the above candidate repositories
@@ -26,8 +26,8 @@ and create a "dev" environment for testing::
 Summary
 =======
 
-* candidate 4 works out-of-the-box, but only if ``CONFIG_EMBEDDED`` is
-  *not* enabled in the host kernel
+* candidate 4 works out-of-the-box, but only with a distro-style kernel config
+  (note an embedded defconfig may not work)
 * the browser-based result looks nice and handles fairly dense data well
 
 The rest have everything from bit-rot to stale (out-of-order) headers and most
@@ -40,8 +40,20 @@ Other than sarcharts_ the only viable/alternate workflow appears to be:
 1. extract CSV data from the main binary data file(s) using ``sadf``
 2. ingest CSV data via spreadsheet or custom script (Python, shell, etc)
 
-
 .. _sarcharts: https://github.com/pafernanr/sarcharts
+
+
+.. important:: Useful observation about data collection with ``sar``, culled
+   from stackexchange:
+
+   Apparently when you tell ``sar`` to collect system statistics into a file,
+   it outputs everything into it, not just the options you passed it.
+
+   So, what the command ``sar -r 1 -o /tmp/memory_usage`` is really saying is:
+   "capture all options at a sample rate of one per second, and record them
+   in the given file. Also, output the memory statistics to the terminal at
+   the same rate".
+
 
 Notes
 -----
@@ -51,7 +63,9 @@ Notes
 * CSV data is separated by type with a comment line showing the headers
   for each type, otherwise *there are no column headers*
 * the CSV separators are semicolons (not commas)
-
+* the "minimal" data set is collected by sa1(sadc)
+* the default (non-optional) data set collected by sar is *much* larger
+* either way, the exact contents depends on kernel config
 
 Examples
 ========
