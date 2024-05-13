@@ -5,6 +5,7 @@ __pycache__/
 
 # project-y stuff
 ext/
+out/
 sarcharts/
 
 # C extensions
