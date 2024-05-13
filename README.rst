@@ -113,9 +113,12 @@ Graphs
 
   Figure 2 sadf CPU parameters (cropped and converted to png)
 
+.. raw:: pdf
+
+   Spacer 0 1cm
 
 .. figure:: examples/gperf_cpu.png
-  :width: 90%
+  :width: 95%
 
   Figure 3 gperf CPU (percent)
 
