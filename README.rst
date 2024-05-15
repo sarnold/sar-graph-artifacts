@@ -90,9 +90,9 @@ Extract all data as CSV::
 
   $ sadf -d -- -A /path/to/sa/sa05 > all.csv
 
-Extract only CPU data as CSV::
+Extract only CPU data (in original local time) as CSV::
 
-  $ sadf -d -- -u ALL /path/to/sa/sa10 > sa10-cpu.csv
+  $ sadf -dt -- -u ALL /path/to/sa/sa10 > sa10-cpu.csv
 
 Generate full HTML charts for all data::
 

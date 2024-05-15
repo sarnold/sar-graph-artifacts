@@ -1,0 +1,9 @@
+/proc/stat cpu line aggregates cpuN..
+user;nice;system;idle;iowait;irq;softirq;steal;guest;guest_nice
+
+
+Idle=idle+iowait
+NonIdle=user+nice+system+irq+softirq+steal
+Total=Idle+NonIdle # first line of file for all cpus
+
+CPU_Percentage=((Total-PrevTotal)-(Idle-PrevIdle))/(Total-PrevTotal)
