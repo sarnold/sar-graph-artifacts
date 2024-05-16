@@ -7,3 +7,12 @@ NonIdle=user+nice+system+irq+softirq+steal
 Total=Idle+NonIdle # first line of file for all cpus
 
 CPU_Percentage=((Total-PrevTotal)-(Idle-PrevIdle))/(Total-PrevTotal)
+
+
+Slightly different:
+
+cpu_delta = (Total-PrevTotal)
+idle_delta = (Idle-PrevIdle)
+cpu_use = (cpu_delta - idle_delta)
+
+cpu_usage = (100 * cpu_use / cpu_delta)

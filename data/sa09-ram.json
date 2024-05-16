@@ -1,0 +1,182 @@
+{"sysstat": {
+	"hosts": [
+		{
+			"nodename": "raspberrypi3-64",
+			"sysname": "Linux",
+			"release": "5.15.92-v8",
+			"machine": "aarch64",
+			"number-of-cpus": 4,
+			"file-date": "2018-03-08",
+			"file-utc-time": "20:01:52",
+			"timezone": "UTC",
+			"statistics": [
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:01:53", "utc": 0, "interval": 1},
+					"memory": {"memfree": 818088, "avail": 844924, "memused": 41192, "memused-percent": 4.42, "buffers": 8384, "cached": 35172, "commit": 98508, "commit-percent": 6.22, "active": 23640, "inactive": 31120, "dirty": 0, "anonpg": 11208, "slab": 29412, "kstack": 2856, "pgtbl": 872, "vmused": 10152}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:02:03", "utc": 0, "interval": 10},
+					"memory": {"memfree": 818648, "avail": 845604, "memused": 40472, "memused-percent": 4.34, "buffers": 8392, "cached": 35268, "commit": 98508, "commit-percent": 6.22, "active": 23784, "inactive": 30988, "dirty": 0, "anonpg": 11312, "slab": 29468, "kstack": 2832, "pgtbl": 936, "vmused": 10152}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:02:04", "utc": 0, "interval": 1},
+					"memory": {"memfree": 818700, "avail": 845656, "memused": 40412, "memused-percent": 4.33, "buffers": 8392, "cached": 35272, "commit": 98508, "commit-percent": 6.22, "active": 23792, "inactive": 31152, "dirty": 8, "anonpg": 11404, "slab": 29472, "kstack": 2848, "pgtbl": 968, "vmused": 10168}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:02:14", "utc": 0, "interval": 10},
+					"memory": {"memfree": 818224, "avail": 845192, "memused": 40876, "memused-percent": 4.38, "buffers": 8408, "cached": 35268, "commit": 98508, "commit-percent": 6.22, "active": 23856, "inactive": 30936, "dirty": 0, "anonpg": 11220, "slab": 29472, "kstack": 2848, "pgtbl": 936, "vmused": 10168}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:02:15", "utc": 0, "interval": 1},
+					"memory": {"memfree": 817984, "avail": 844976, "memused": 41076, "memused-percent": 4.41, "buffers": 8408, "cached": 35284, "commit": 98508, "commit-percent": 6.22, "active": 23896, "inactive": 31164, "dirty": 16, "anonpg": 11400, "slab": 29496, "kstack": 2864, "pgtbl": 968, "vmused": 10184}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:02:25", "utc": 0, "interval": 10},
+					"memory": {"memfree": 818476, "avail": 845488, "memused": 40592, "memused-percent": 4.35, "buffers": 8424, "cached": 35280, "commit": 98508, "commit-percent": 6.22, "active": 23908, "inactive": 31012, "dirty": 4, "anonpg": 11320, "slab": 29476, "kstack": 2864, "pgtbl": 936, "vmused": 10184}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:02:26", "utc": 0, "interval": 1},
+					"memory": {"memfree": 818524, "avail": 845556, "memused": 40516, "memused-percent": 4.35, "buffers": 8424, "cached": 35296, "commit": 98508, "commit-percent": 6.22, "active": 23924, "inactive": 31172, "dirty": 16, "anonpg": 11404, "slab": 29488, "kstack": 2880, "pgtbl": 972, "vmused": 10184}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:02:36", "utc": 0, "interval": 10},
+					"memory": {"memfree": 801668, "avail": 829040, "memused": 57032, "memused-percent": 6.12, "buffers": 8448, "cached": 35612, "commit": 139368, "commit-percent": 8.79, "active": 23948, "inactive": 47856, "dirty": 28, "anonpg": 27860, "slab": 29488, "kstack": 2896, "pgtbl": 1016, "vmused": 10232}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:02:37", "utc": 0, "interval": 1},
+					"memory": {"memfree": 801668, "avail": 829040, "memused": 57032, "memused-percent": 6.12, "buffers": 8448, "cached": 35612, "commit": 139368, "commit-percent": 8.79, "active": 23944, "inactive": 47836, "dirty": 28, "anonpg": 27836, "slab": 29488, "kstack": 2896, "pgtbl": 1012, "vmused": 10232}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:02:47", "utc": 0, "interval": 10},
+					"memory": {"memfree": 801668, "avail": 829060, "memused": 57012, "memused-percent": 6.12, "buffers": 8456, "cached": 35624, "commit": 139368, "commit-percent": 8.79, "active": 23956, "inactive": 47880, "dirty": 12, "anonpg": 27856, "slab": 29488, "kstack": 2880, "pgtbl": 1016, "vmused": 10232}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:02:48", "utc": 0, "interval": 1},
+					"memory": {"memfree": 801668, "avail": 829060, "memused": 57008, "memused-percent": 6.12, "buffers": 8456, "cached": 35628, "commit": 139368, "commit-percent": 8.79, "active": 23960, "inactive": 47988, "dirty": 8, "anonpg": 27940, "slab": 29488, "kstack": 2896, "pgtbl": 1048, "vmused": 10232}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:02:58", "utc": 0, "interval": 10},
+					"memory": {"memfree": 801868, "avail": 829272, "memused": 56784, "memused-percent": 6.09, "buffers": 8472, "cached": 35636, "commit": 139368, "commit-percent": 8.79, "active": 23952, "inactive": 47816, "dirty": 0, "anonpg": 27776, "slab": 29488, "kstack": 2864, "pgtbl": 984, "vmused": 10232}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:02:59", "utc": 0, "interval": 1},
+					"memory": {"memfree": 801920, "avail": 829340, "memused": 56728, "memused-percent": 6.09, "buffers": 8472, "cached": 35640, "commit": 139368, "commit-percent": 8.79, "active": 23976, "inactive": 47996, "dirty": 12, "anonpg": 27940, "slab": 29488, "kstack": 2896, "pgtbl": 1048, "vmused": 10232}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:03:09", "utc": 0, "interval": 10},
+					"memory": {"memfree": 819496, "avail": 846872, "memused": 39200, "memused-percent": 4.20, "buffers": 8492, "cached": 35572, "commit": 98508, "commit-percent": 6.22, "active": 23984, "inactive": 31228, "dirty": 0, "anonpg": 11316, "slab": 29488, "kstack": 2864, "pgtbl": 936, "vmused": 10216}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:03:10", "utc": 0, "interval": 1},
+					"memory": {"memfree": 819548, "avail": 846940, "memused": 39132, "memused-percent": 4.20, "buffers": 8492, "cached": 35588, "commit": 98508, "commit-percent": 6.22, "active": 23996, "inactive": 31444, "dirty": 48, "anonpg": 11400, "slab": 29488, "kstack": 2880, "pgtbl": 968, "vmused": 10216}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:03:20", "utc": 0, "interval": 10},
+					"memory": {"memfree": 819100, "avail": 846496, "memused": 39568, "memused-percent": 4.24, "buffers": 8500, "cached": 35592, "commit": 98508, "commit-percent": 6.22, "active": 23992, "inactive": 31304, "dirty": 16, "anonpg": 11316, "slab": 29488, "kstack": 2864, "pgtbl": 936, "vmused": 10200}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:03:21", "utc": 0, "interval": 1},
+					"memory": {"memfree": 819100, "avail": 846516, "memused": 39544, "memused-percent": 4.24, "buffers": 8500, "cached": 35600, "commit": 98508, "commit-percent": 6.22, "active": 24004, "inactive": 31472, "dirty": 12, "anonpg": 11400, "slab": 29504, "kstack": 2880, "pgtbl": 968, "vmused": 10200}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:03:32", "utc": 0, "interval": 10},
+					"memory": {"memfree": 819100, "avail": 846520, "memused": 39524, "memused-percent": 4.24, "buffers": 8516, "cached": 35604, "commit": 98508, "commit-percent": 6.22, "active": 24000, "inactive": 31320, "dirty": 0, "anonpg": 11320, "slab": 29504, "kstack": 2864, "pgtbl": 936, "vmused": 10184}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:03:33", "utc": 0, "interval": 1},
+					"memory": {"memfree": 819100, "avail": 846536, "memused": 39520, "memused-percent": 4.24, "buffers": 8516, "cached": 35608, "commit": 98508, "commit-percent": 6.22, "active": 24020, "inactive": 31428, "dirty": 16, "anonpg": 11400, "slab": 29504, "kstack": 2880, "pgtbl": 968, "vmused": 10184}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:03:43", "utc": 0, "interval": 10},
+					"memory": {"memfree": 803980, "avail": 831520, "memused": 54532, "memused-percent": 5.85, "buffers": 8540, "cached": 35680, "commit": 139368, "commit-percent": 8.79, "active": 24044, "inactive": 47932, "dirty": 0, "anonpg": 27856, "slab": 29516, "kstack": 2880, "pgtbl": 1012, "vmused": 10216}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:03:44", "utc": 0, "interval": 1},
+					"memory": {"memfree": 803980, "avail": 831520, "memused": 54528, "memused-percent": 5.85, "buffers": 8540, "cached": 35684, "commit": 139368, "commit-percent": 8.79, "active": 24048, "inactive": 48040, "dirty": 8, "anonpg": 27948, "slab": 29516, "kstack": 2896, "pgtbl": 1044, "vmused": 10216}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:03:54", "utc": 0, "interval": 10},
+					"memory": {"memfree": 804180, "avail": 831740, "memused": 54304, "memused-percent": 5.83, "buffers": 8556, "cached": 35692, "commit": 139368, "commit-percent": 8.79, "active": 24052, "inactive": 47948, "dirty": 16, "anonpg": 27860, "slab": 29516, "kstack": 2896, "pgtbl": 1012, "vmused": 10216}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:03:55", "utc": 0, "interval": 1},
+					"memory": {"memfree": 804232, "avail": 831800, "memused": 54248, "memused-percent": 5.82, "buffers": 8556, "cached": 35696, "commit": 139368, "commit-percent": 8.79, "active": 24064, "inactive": 48048, "dirty": 24, "anonpg": 27940, "slab": 29516, "kstack": 2912, "pgtbl": 1044, "vmused": 10216}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:04:05", "utc": 0, "interval": 10},
+					"memory": {"memfree": 803696, "avail": 831280, "memused": 54772, "memused-percent": 5.88, "buffers": 8572, "cached": 35692, "commit": 139368, "commit-percent": 8.79, "active": 24068, "inactive": 47936, "dirty": 28, "anonpg": 27856, "slab": 29516, "kstack": 2896, "pgtbl": 1012, "vmused": 10232}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:04:06", "utc": 0, "interval": 1},
+					"memory": {"memfree": 803752, "avail": 831360, "memused": 54684, "memused-percent": 5.87, "buffers": 8572, "cached": 35708, "commit": 139368, "commit-percent": 8.79, "active": 24080, "inactive": 48116, "dirty": 36, "anonpg": 27960, "slab": 29532, "kstack": 2912, "pgtbl": 1044, "vmused": 10232}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:04:16", "utc": 0, "interval": 10},
+					"memory": {"memfree": 803752, "avail": 831368, "memused": 54668, "memused-percent": 5.86, "buffers": 8580, "cached": 35712, "commit": 139368, "commit-percent": 8.79, "active": 24076, "inactive": 47944, "dirty": 40, "anonpg": 27772, "slab": 29536, "kstack": 2924, "pgtbl": 1012, "vmused": 10232}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:04:17", "utc": 0, "interval": 1},
+					"memory": {"memfree": 803752, "avail": 831384, "memused": 54660, "memused-percent": 5.86, "buffers": 8580, "cached": 35720, "commit": 139368, "commit-percent": 8.79, "active": 24088, "inactive": 48120, "dirty": 48, "anonpg": 27952, "slab": 29536, "kstack": 2912, "pgtbl": 1044, "vmused": 10232}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:04:27", "utc": 0, "interval": 10},
+					"memory": {"memfree": 803500, "avail": 831144, "memused": 54900, "memused-percent": 5.89, "buffers": 8588, "cached": 35724, "commit": 139368, "commit-percent": 8.79, "active": 24100, "inactive": 47980, "dirty": 40, "anonpg": 27872, "slab": 29536, "kstack": 2896, "pgtbl": 1012, "vmused": 10232}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:04:28", "utc": 0, "interval": 1},
+					"memory": {"memfree": 803500, "avail": 831144, "memused": 54896, "memused-percent": 5.89, "buffers": 8588, "cached": 35728, "commit": 139368, "commit-percent": 8.79, "active": 24156, "inactive": 48028, "dirty": 44, "anonpg": 27952, "slab": 29536, "kstack": 2912, "pgtbl": 1044, "vmused": 10232}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:04:38", "utc": 0, "interval": 10},
+					"memory": {"memfree": 803700, "avail": 831372, "memused": 54656, "memused-percent": 5.86, "buffers": 8620, "cached": 35736, "commit": 139368, "commit-percent": 8.79, "active": 24108, "inactive": 48036, "dirty": 28, "anonpg": 27924, "slab": 29536, "kstack": 2896, "pgtbl": 1012, "vmused": 10232}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:04:39", "utc": 0, "interval": 1},
+					"memory": {"memfree": 803752, "avail": 831440, "memused": 54600, "memused-percent": 5.86, "buffers": 8620, "cached": 35740, "commit": 139368, "commit-percent": 8.79, "active": 24128, "inactive": 48144, "dirty": 36, "anonpg": 28012, "slab": 29536, "kstack": 2912, "pgtbl": 1044, "vmused": 10232}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:04:49", "utc": 0, "interval": 10},
+					"memory": {"memfree": 803500, "avail": 831200, "memused": 54832, "memused-percent": 5.88, "buffers": 8628, "cached": 35748, "commit": 139368, "commit-percent": 8.79, "active": 24124, "inactive": 48068, "dirty": 16, "anonpg": 27928, "slab": 29540, "kstack": 2912, "pgtbl": 1012, "vmused": 10248}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:04:50", "utc": 0, "interval": 1},
+					"memory": {"memfree": 803500, "avail": 831220, "memused": 54820, "memused-percent": 5.88, "buffers": 8636, "cached": 35752, "commit": 139368, "commit-percent": 8.79, "active": 24144, "inactive": 48252, "dirty": 24, "anonpg": 28008, "slab": 29540, "kstack": 2928, "pgtbl": 1044, "vmused": 10248}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:05:00", "utc": 0, "interval": 10},
+					"memory": {"memfree": 803248, "avail": 830972, "memused": 55060, "memused-percent": 5.91, "buffers": 8644, "cached": 35756, "commit": 139368, "commit-percent": 8.79, "active": 24140, "inactive": 48076, "dirty": 28, "anonpg": 27928, "slab": 29540, "kstack": 2924, "pgtbl": 1012, "vmused": 10248}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:05:01", "utc": 0, "interval": 1},
+					"memory": {"memfree": 803248, "avail": 830988, "memused": 55052, "memused-percent": 5.91, "buffers": 8644, "cached": 35764, "commit": 139368, "commit-percent": 8.79, "active": 24148, "inactive": 48248, "dirty": 12, "anonpg": 28008, "slab": 29540, "kstack": 2912, "pgtbl": 1040, "vmused": 10248}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:05:11", "utc": 0, "interval": 10},
+					"memory": {"memfree": 803024, "avail": 830784, "memused": 55216, "memused-percent": 5.92, "buffers": 8668, "cached": 35768, "commit": 139368, "commit-percent": 8.79, "active": 24164, "inactive": 48144, "dirty": 16, "anonpg": 27884, "slab": 29572, "kstack": 2912, "pgtbl": 1040, "vmused": 10232}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:05:12", "utc": 0, "interval": 1},
+					"memory": {"memfree": 803024, "avail": 830800, "memused": 55208, "memused-percent": 5.92, "buffers": 8668, "cached": 35776, "commit": 139368, "commit-percent": 8.79, "active": 24188, "inactive": 48252, "dirty": 28, "anonpg": 28008, "slab": 29572, "kstack": 2912, "pgtbl": 1044, "vmused": 10232}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:05:22", "utc": 0, "interval": 10},
+					"memory": {"memfree": 803228, "avail": 831012, "memused": 54992, "memused-percent": 5.90, "buffers": 8676, "cached": 35780, "commit": 139368, "commit-percent": 8.79, "active": 24188, "inactive": 48088, "dirty": 16, "anonpg": 27928, "slab": 29572, "kstack": 2912, "pgtbl": 1012, "vmused": 10264}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:05:23", "utc": 0, "interval": 1},
+					"memory": {"memfree": 803276, "avail": 831064, "memused": 54940, "memused-percent": 5.89, "buffers": 8676, "cached": 35784, "commit": 139368, "commit-percent": 8.79, "active": 24248, "inactive": 48132, "dirty": 8, "anonpg": 28008, "slab": 29572, "kstack": 2928, "pgtbl": 1044, "vmused": 10264}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:05:33", "utc": 0, "interval": 10},
+					"memory": {"memfree": 817840, "avail": 845588, "memused": 40396, "memused-percent": 4.33, "buffers": 8692, "cached": 35724, "commit": 98508, "commit-percent": 6.22, "active": 24408, "inactive": 31200, "dirty": 8, "anonpg": 11296, "slab": 29596, "kstack": 2896, "pgtbl": 932, "vmused": 10248}
+				},
+				{
+					"timestamp": {"date": "2018-03-09", "time": "20:05:34", "utc": 0, "interval": 1},
+					"memory": {"memfree": 817840, "avail": 845592, "memused": 40388, "memused-percent": 4.33, "buffers": 8692, "cached": 35732, "commit": 98508, "commit-percent": 6.22, "active": 24420, "inactive": 31332, "dirty": 16, "anonpg": 11404, "slab": 29596, "kstack": 2912, "pgtbl": 972, "vmused": 10248}
+				}
+			],
+			"restarts": [
+			]
+		}
+	]
+}}
