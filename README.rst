@@ -105,7 +105,7 @@ Graphs
 .. figure:: examples/sarcharts.png
   :width: 90%
 
-  Figure 1 sarcharts memused (percent)
+  Figure 1 sarcharts CPU load (screenshot)
 
 
 .. figure:: examples/sadf-cpu.png
