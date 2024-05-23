@@ -9,7 +9,7 @@ multi-threaded applications.
 * candidate 1 - https://github.com/stoneboy100200/sclean (expects text output from \*stat cmds)
 * candidate 2 - https://github.com/pdutton-vc/sarviewer (not really python, broken)
 * candidate 3 - https://github.com/jpgxs/python-sadf (example old and broken)
-* candidate 4 - https://github.com/pafernanr/sarcharts (works fine except on some embedded kernels)
+* candidate 4 - https://github.com/pafernanr/sarcharts (works fine across kernels and architectures)
 * candidate 5 - https://github.com/sakti/gperf (old and needs cleanup, graphs ugly)
 
 Run the following Tox_ command to sync the the above candidate repositories
@@ -19,15 +19,37 @@ and create a "dev" environment for testing::
   $ tox -e dev
   $ source .venv/bin/activate
 
-
 .. _Tox: https://tox.wiki/en/latest/user_guide.html
 
+Preferred workflow for embedded Linux performance data
+------------------------------------------------------
 
-Summary
-=======
+* for "summary" or big picture data, use the ``sa1`` cron job
+* for detailed data, use a script to run the ``sa1`` command instead of cron
+* generate full quicklook graphs using ``sarcharts``
+* extract a subset of data for analysis using ``sadf``
+* graph a subset using libreoffice-calc or python/matplotlib or gnuplot
 
-* candidate 4 works out-of-the-box, but only with a distro-style kernel config
-  (note an embedded defconfig may not work)
+Example workflow using sample data
+----------------------------------
+
+Use the virtual environment created above to run the following commands
+using the ``sa16`` sample data file, or substitute your own file::
+
+  $ source .venv/bin/activate
+  $ sarcharts data/sa16         # generate/view quicklook
+  $ mkdir -p out                # create output dir
+  $ sadf -dt -- -u ALL data/sa16 > data/sa16-cpu.csv    # extract CPU data
+  $ sadf -dt -- -r ALL data/sa16 > data/sa16-ram.csv    # extract MEM data
+  $ python scripts/cpu.py
+  $ python scripts/ram.py
+
+
+Summary of graphing candidates
+==============================
+
+* candidate 4 works out-of-the-box, but graphs may not be optimized for
+  the JSON output yet
 * the browser-based result looks nice and handles fairly dense data well
 
 The rest have everything from bit-rot to stale (out-of-order) headers and most
@@ -37,8 +59,8 @@ Other than sarcharts_ the only viable/alternate workflow appears to be:
 
 1. generate SVG graphs directly from binary data file(s) using ``sadf`` --or--
 
-1. extract CSV data from the main binary data file(s) using ``sadf``
-2. ingest CSV data via spreadsheet or custom script (Python, shell, etc)
+1. dump CSV (or JSON) data from the main binary data file(s) using ``sadf``
+2. ingest the data via spreadsheet or custom script (Python, shell, etc)
 
 .. _sarcharts: https://github.com/pafernanr/sarcharts
 
@@ -70,9 +92,9 @@ Notes
 Examples
 ========
 
-You can run the subtools as shown in the cron entry, or you can run one of
-the main parent commands (eg, ``sar``) but note the argument order is not
-the same.
+Run the subtools as shown in the cron entry, or run one of the main
+parent commands (eg, ``sar``) but note the argument order is not the
+same.
 
 Example from man page::
 
@@ -80,8 +102,8 @@ Example from man page::
 
 Examples using ``sar``::
 
-  $ sar -A 1 1  # collect ALL plus -I and -P (see man page)
-  $ sar -r ALL -u ALL 1 1  # collect only CPU and MEM parameters
+  $ sar -A 1 1             # collect ALL plus -I and -P (see man page)
+  $ sar -r ALL -u ALL 1 1  # collect ALL *and* output CPU and MEM parameters to console
 
 
 Note the above ``sar`` examples may collect more data than advertised.
@@ -126,9 +148,8 @@ Graphs
 Sample data
 -----------
 
-Sample data from arm64 test devices illustrating the result of Linux kernel
-option ``CONFIG_EMBEDDED`` on (sar) activities. Enabled on Rpi kernel, but no
-longer exists in 6.8.
+Sample data from arm64 and armv7 test devices illustrating the results of data collection
+under various loads on different platforms.
 
 Rockchip with 6.8.x kernel, filename prefix ``sa11``::
 

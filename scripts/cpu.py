@@ -14,17 +14,18 @@ import matplotlib.pyplot as plt
 
 
 plt.rcParams.update({'font.size': 8})
-plt.rcParams['lines.linewidth'] = 1.5
+plt.rcParams['lines.linewidth'] = 0.5
 time_format = matplotlib.dates.DateFormatter('%H:%M:%S')
 plt.gca().xaxis.set_major_formatter(time_format)
 plt.gcf().autofmt_xdate()
 
 x = []
 cpu_percent_usage = []
+idle_percent = []
 
 
 def generate_graph():
-    with open('data/sa12-cpu.csv', 'r') as csvfile:
+    with open('data/sa16-cpu.csv', 'r') as csvfile:
         data_source = csv.reader(csvfile, delimiter=';')
         hostname = None
         prev_total = 0
@@ -50,8 +51,10 @@ def generate_graph():
             cpu_use = cpu_delta - idle_delta
             cpu_usage = (100 * cpu_use / cpu_delta)
             cpu_percent_usage.append(cpu_usage)
+            idle_percent.append(100 * idle_delta / cpu_delta)
 
-    plt.plot(x, np.asarray(cpu_percent_usage, float), label='% Used', color='g', antialiased=True)
+    plt.plot(x, np.asarray(idle_percent, float), label='% Idle', color='g', antialiased=True)
+    plt.plot(x, np.asarray(cpu_percent_usage, float), label='% Used', color='r', antialiased=True)
 
     plt.xlabel('Time',fontstyle='italic')
     plt.ylabel('CPU used (%)',fontstyle='italic')

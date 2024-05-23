@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 
 plt.rcParams.update({'font.size': 8})
-plt.rcParams['lines.linewidth'] = 1.5
+plt.rcParams['lines.linewidth'] = 0.5
 time_format = matplotlib.dates.DateFormatter('%H:%M:%S')
 plt.gca().xaxis.set_major_formatter(time_format)
 plt.gcf().autofmt_xdate()
@@ -24,7 +24,7 @@ mem_used = []
 
 
 def generate_graph():
-    with open('data/sa12-ram.csv', 'r') as csvfile:
+    with open('data/sa16-ram.csv', 'r') as csvfile:
         data_source = csv.reader(csvfile, delimiter=';')
         hostname = None
         for row in data_source:
