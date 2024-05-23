@@ -1,0 +1,218 @@
+From ba581349b34e66d0fc3a5795fb9ddda8679b86db Mon Sep 17 00:00:00 2001
+From: "S. Lockwood-Childs" <sjl@vctlabs.com>
+Date: Fri, 3 May 2024 02:56:23 -0700
+Subject: [PATCH] Get mem plot working with systat 12.x
+
+---
+ plotters/matplotlib/contextsw.py    |  4 ++--
+ plotters/matplotlib/cpu.py          |  4 ++--
+ plotters/matplotlib/iotransfer.py   |  4 ++--
+ plotters/matplotlib/loadaverage.py  |  4 ++--
+ plotters/matplotlib/netinterface.py |  4 ++--
+ plotters/matplotlib/proc.py         |  4 ++--
+ plotters/matplotlib/ram.py          | 13 +++++++------
+ plotters/matplotlib/sockets.py      |  4 ++--
+ plotters/matplotlib/swap.py         |  8 ++++----
+ plotters/matplotlib/tasks.py        |  4 ++--
+ 10 files changed, 27 insertions(+), 26 deletions(-)
+
+diff --git a/plotters/matplotlib/contextsw.py b/plotters/matplotlib/contextsw.py
+index 560b2ca..392ab6e 100755
+--- a/plotters/matplotlib/contextsw.py
++++ b/plotters/matplotlib/contextsw.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ """
+ Author        :Julio Sanz
+ Website       :www.elarraydejota.com
+@@ -67,4 +67,4 @@ def generate_graph():
+ # ======================
+ 
+ if __name__ == '__main__':
+-    generate_graph()
+\ No newline at end of file
++    generate_graph()
+diff --git a/plotters/matplotlib/cpu.py b/plotters/matplotlib/cpu.py
+index 7d89602..0983011 100755
+--- a/plotters/matplotlib/cpu.py
++++ b/plotters/matplotlib/cpu.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ """
+ Author        :Julio Sanz
+ Website       :www.elarraydejota.com
+@@ -73,4 +73,4 @@ def generate_graph():
+ # ======================
+ 
+ if __name__ == '__main__':
+-    generate_graph()
+\ No newline at end of file
++    generate_graph()
+diff --git a/plotters/matplotlib/iotransfer.py b/plotters/matplotlib/iotransfer.py
+index 67eda84..87723e8 100755
+--- a/plotters/matplotlib/iotransfer.py
++++ b/plotters/matplotlib/iotransfer.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ """
+ Author        :Julio Sanz
+ Website       :www.elarraydejota.com
+@@ -70,4 +70,4 @@ def generate_graph():
+ # ======================
+ 
+ if __name__ == '__main__':
+-    generate_graph()
+\ No newline at end of file
++    generate_graph()
+diff --git a/plotters/matplotlib/loadaverage.py b/plotters/matplotlib/loadaverage.py
+index 69301c3..94e5c79 100755
+--- a/plotters/matplotlib/loadaverage.py
++++ b/plotters/matplotlib/loadaverage.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ """
+ Author        :Julio Sanz
+ Website       :www.elarraydejota.com
+@@ -73,4 +73,4 @@ def generate_graph():
+ # ======================
+ 
+ if __name__ == '__main__':
+-    generate_graph()
+\ No newline at end of file
++    generate_graph()
+diff --git a/plotters/matplotlib/netinterface.py b/plotters/matplotlib/netinterface.py
+index d9463a5..8041498 100755
+--- a/plotters/matplotlib/netinterface.py
++++ b/plotters/matplotlib/netinterface.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ """
+ Author        :Julio Sanz
+ Website       :www.elarraydejota.com
+@@ -70,4 +70,4 @@ def generate_graph():
+ # ======================
+ 
+ if __name__ == '__main__':
+-    generate_graph()
+\ No newline at end of file
++    generate_graph()
+diff --git a/plotters/matplotlib/proc.py b/plotters/matplotlib/proc.py
+index ed1de55..0bac87f 100755
+--- a/plotters/matplotlib/proc.py
++++ b/plotters/matplotlib/proc.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ """
+ Author        :Julio Sanz
+ Website       :www.elarraydejota.com
+@@ -67,4 +67,4 @@ def generate_graph():
+ # ======================
+ 
+ if __name__ == '__main__':
+-    generate_graph()
+\ No newline at end of file
++    generate_graph()
+diff --git a/plotters/matplotlib/ram.py b/plotters/matplotlib/ram.py
+index d1778f4..ba0caba 100755
+--- a/plotters/matplotlib/ram.py
++++ b/plotters/matplotlib/ram.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ """
+ Author        :Julio Sanz
+ Website       :www.elarraydejota.com
+@@ -48,10 +48,11 @@ def generate_graph():
+             a = datetime.strptime((row[0]),'%H:%M:%S')
+             x.append((a))
+             # The remaining columns contain data
+-            free_mem.append(str((int(row[1])/1024)+(int(row[4])/1024)+(int(row[5])/1024)))
+-            used_mem.append(str((int(row[2])/1024)-(int(row[4])/1024)-(int(row[5])/1024)))
+-            buffer_mem.append(str(int(row[4])/1024))
+-            cached_mem.append(str(int(row[5])/1024))
++            # 1:kbmemfree 3:kbmemused 5:kbbuffers 6:kbcached
++            free_mem.append((int(row[1])/1024)+(int(row[5])/1024)+(int(row[6])/1024))
++            used_mem.append((int(row[3])/1024))
++            buffer_mem.append(int(row[5])/1024)
++            cached_mem.append(int(row[6])/1024)
+     
+     # Plot lines
+     plt.plot(x,free_mem, label='Free', color='g', antialiased=True)
+@@ -76,4 +77,4 @@ def generate_graph():
+ # ======================
+ 
+ if __name__ == '__main__':
+-    generate_graph()
+\ No newline at end of file
++    generate_graph()
+diff --git a/plotters/matplotlib/sockets.py b/plotters/matplotlib/sockets.py
+index 95f04b7..f9efd22 100755
+--- a/plotters/matplotlib/sockets.py
++++ b/plotters/matplotlib/sockets.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ """
+ Author        :Julio Sanz
+ Website       :www.elarraydejota.com
+@@ -76,4 +76,4 @@ def generate_graph():
+ # ======================
+ 
+ if __name__ == '__main__':
+-    generate_graph()
+\ No newline at end of file
++    generate_graph()
+diff --git a/plotters/matplotlib/swap.py b/plotters/matplotlib/swap.py
+index 944e6fe..03c39d4 100755
+--- a/plotters/matplotlib/swap.py
++++ b/plotters/matplotlib/swap.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ """
+ Author        :Julio Sanz
+ Website       :www.elarraydejota.com
+@@ -46,8 +46,8 @@ def generate_graph():
+             a = datetime.strptime((row[0]),'%H:%M:%S')
+             x.append((a))
+             # The remaining columns contain data
+-            swap_free.append(str(int(row[1])/1024))
+-            swap_used.append(str(int(row[2])/1024))
++            swap_free.append(int(row[1])/1024)
++            swap_used.append(int(row[2])/1024)
+             
+ 
+     # Plot lines
+@@ -71,4 +71,4 @@ def generate_graph():
+ # ======================
+ 
+ if __name__ == '__main__':
+-    generate_graph()
+\ No newline at end of file
++    generate_graph()
+diff --git a/plotters/matplotlib/tasks.py b/plotters/matplotlib/tasks.py
+index a42791c..d83696c 100755
+--- a/plotters/matplotlib/tasks.py
++++ b/plotters/matplotlib/tasks.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/env python3
+ """
+ Author        :Julio Sanz
+ Website       :www.elarraydejota.com
+@@ -73,4 +73,4 @@ def generate_graph():
+ # ======================
+ 
+ if __name__ == '__main__':
+-    generate_graph()
+\ No newline at end of file
++    generate_graph()
+-- 
+2.25.1
+
